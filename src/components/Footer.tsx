@@ -4,7 +4,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "luc
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer id="contato" className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -39,21 +39,21 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Links Rápidos</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+              <button onClick={() => document.getElementById('cursos')?.scrollIntoView({ behavior: 'smooth' })} className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm text-left">
                 Todos os Cursos
-              </a>
-              <a href="#" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+              </button>
+              <button onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })} className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm text-left">
                 Sobre Nós
-              </a>
-              <a href="#" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+              </button>
+              <button onClick={() => document.getElementById('instrutores')?.scrollIntoView({ behavior: 'smooth' })} className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm text-left">
                 Nossa Equipe
-              </a>
-              <a href="#" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
-                Depoimentos
-              </a>
-              <a href="#" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
-                FAQ
-              </a>
+              </button>
+              <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm text-left">
+                Início
+              </button>
+              <button onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })} className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm text-left">
+                Contato
+              </button>
             </div>
           </div>
           
